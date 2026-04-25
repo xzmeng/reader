@@ -12,7 +12,7 @@ echo "▶ Backend → Railway (Singapore)..."
 cd "$ROOT"
 
 # Link to Railway project if not already linked
-railway status &>/dev/null || railway init
+railway status &>/dev/null || railway link
 
 railway up --detach
 
