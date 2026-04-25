@@ -11,6 +11,9 @@ echo ""
 echo "▶ Backend → Railway (Singapore)..."
 cd "$ROOT"
 
+# Link to Railway project if not already linked
+railway status &>/dev/null || railway link
+
 railway up --detach
 
 # Create public domain if one doesn't exist yet
