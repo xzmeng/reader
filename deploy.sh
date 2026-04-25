@@ -32,6 +32,9 @@ echo ""
 echo "▶ Frontend → Vercel (global CDN)..."
 cd "$ROOT"
 
+# Link to Vercel project if not already linked
+[ -f ".vercel/project.json" ] || vercel link
+
 # Point frontend at the Railway API
 vercel env rm VITE_API_URL production --yes 2>/dev/null || true
 printf '%s' "$API_URL" | vercel env add VITE_API_URL production

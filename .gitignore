@@ -19,6 +19,9 @@ backend/uploads/
 # Claude Code
 .claude/
 
+# Vercel
+.vercel/
+
 # Node
 node_modules/
 frontend/dist/
